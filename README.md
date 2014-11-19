@@ -1,4 +1,33 @@
 CubeItMod
 =========
 
-3DS Cubex 3D printer CubeItMod Post-processor for Kisslicer
+CUBEITMOD From original Evanery's CubeIt and Giovanni.V CubeItMod V4.9.2
+KISSlicer BFB GCode post-processor for 3DS CubeX 3d printer compatibility
+AutoIt Script
+
+## Usage ##
+
+If Input File is Provided in Command Line, then Process without GUI (as a Kisslicer Post-Processor) Call as 
+
+    > CUBEITMOD V4.9 {InputFileName}
+
+Where **{InputFileName}** is the name of the file to process (will be saved as *.BAK)
+
+## Config.ini ##
+
+###Sparse infill Patch Tweak 
+####default = 1:
+#####Exemple 0.3 = 30%
+#####Exemple 0.5 = 50%
+    > M108_RPM_speed_Factor=0.3
+
+
+###Global Max X Y Speed Factor (1/x%) 
+####default = 0.1:
+#####Exemple 0.1 = X10
+#####Exemple 0.05 = X20
+    > Max_XY_speed_factor=0.05
+
+###Global Max F Speed 
+####default = 25000:
+    > Max_F_speed=10
