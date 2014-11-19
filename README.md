@@ -18,18 +18,18 @@ Where **{InputFileName}** is the name of the file to process (will be saved as *
 ## Config.ini ##
 
 ###Sparse infill Patch Tweak 
-####default = 1:
-#####Exemple 0.3 = 30%
-#####Exemple 0.5 = 50%
+####default = 1
+#####sample 0.3 = 30%
+#####sample 0.5 = 50%
     > M108_RPM_speed_Factor=0.3
 
 
-###Global Max X Y Speed Factor (1/x%) 
-####default = 0.1:
-#####Exemple 0.1 = X10
-#####Exemple 0.05 = X20
+###Max X Y Speed Factor (1/x%) 
+####default = 0.1
+#####sample 0.1 = X10
+#####sample 0.05 = X20
     > Max_XY_speed_factor=0.05
 
-###Global Max F Speed 
-####default = 25000:
+###Max F Speed 
+####default = 25000
     > Max_F_speed=30000
