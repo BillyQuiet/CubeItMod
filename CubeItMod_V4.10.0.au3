@@ -321,7 +321,6 @@ Local $OldLine , $InfillLenght = 0 , $InfillFactor , $Layer
 		EndIf
 
 		; Set $Filling or $Soliding or $Stacking or $Perimetering Looping var to 1 if doing Infill or Solid or Stack or Perimeter
-
 		If ((StringInStr ( $Line , "Infill Path'")) > 1 ) or ((StringInStr ( $Line , "Infill'")) > 1 )Then
 			$Filling = 1
 			If (StringInStr ( $Line , "Stacked") > 1 ) Then
@@ -343,6 +342,7 @@ Local $OldLine , $InfillLenght = 0 , $InfillFactor , $Layer
 			FileSetPos ( $hInput , $FilePos, $FILE_BEGIN )
 			$Line = $OldLine
 		EndIf
+		
 		If ((StringInStr ( $Line , "'Solid Path'")) > 1)  or ((StringInStr ( $Line , "'Solid'")) > 1) Then
 			$Soliding = 1
 			$OldLine = $Line
@@ -359,9 +359,11 @@ Local $OldLine , $InfillLenght = 0 , $InfillFactor , $Layer
 			FileSetPos ( $hInput , $FilePos, $FILE_BEGIN )
 			$Line = $OldLine
 		EndIf
+		
 		If ((StringInStr ( $Line , "'Perimeter Path'")) > 1) or ((StringInStr ( $Line , "'Perimeter'")) > 1) Then
 			$Perimetering = 1
 		EndIf
+		
 		If  ((StringInStr ( $Line , "'Loop Path'")) > 1) or ((StringInStr ( $Line , "'Loop'")) > 1) Then
 			$Looping = 1
 		Endif
@@ -416,6 +418,7 @@ Local $OldLine , $InfillLenght = 0 , $InfillFactor , $Layer
 						$MaxRPMFactor = ($ActualRPM/$OldRPM)
 					EndIf
 				Else
+					$ActualRPM = Int ($OldRPM)
 				EndIf
 				$line = ("M" & $TxtExtruder & "08 S" & String ($ActualRPM))
 			EndIf
@@ -531,13 +534,10 @@ Local $OldLine , $InfillLenght = 0 , $InfillFactor , $Layer
 					$line = StringLeft($line , StringinStr ( $line , "F")) & String ($NewXYF)
 				Endif
 				
-				
 				; Get Max speed For info
 				if $NewXYF>$MaxSpeed_calc then
 					$MaxSpeed_calc = $NewXYF
 				endif
-				;
-				
 				
 			EndIf
 
