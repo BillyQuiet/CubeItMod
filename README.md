@@ -2,7 +2,9 @@ CubeItMod
 =========
 
 CUBEITMOD From original Evanery's CubeIt and Giovanni.V CubeItMod V4.9.2
+
 KISSlicer BFB GCode post-processor for 3DS CubeX 3d printer compatibility
+
 AutoIt Script
 
 ## Usage ##
