@@ -32,4 +32,4 @@ Where **{InputFileName}** is the name of the file to process (will be saved as *
 
 ###Global Max F Speed 
 ####default = 25000:
-    > Max_F_speed=10
+    > Max_F_speed=30000
