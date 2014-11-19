@@ -24,9 +24,9 @@ Global $MaxSpeed_calc=0
 
 Command_Line_Or_GUI()
 
-Check_KISSlicer_Comments()
-
 Get_Config()
+
+Check_KISSlicer_Comments()
 
 StringToNumber();Change alphanumericals variables into numerical variables
 
