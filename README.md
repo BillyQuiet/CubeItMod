@@ -11,7 +11,7 @@ AutoIt Script
 
 If Input File is Provided in Command Line, then Process without GUI (as a Kisslicer Post-Processor) Call as 
 
-    > CUBEITMOD V4.9 {InputFileName}
+    > CUBEITMOD V4.10.0 {InputFileName}
 
 Where **{InputFileName}** is the name of the file to process (will be saved as *.BAK)
 
