@@ -54,7 +54,7 @@ Func Messages_Box()
 	EndIf
 	
 	if $MaxSpeed_calc>$Conf_MaxFSpeed then
-		$WarningMsg = @CRLF & $WarningMsg & "------------------> ATTENTION Vitesse trop grande Modifier le parametre Conf_MaxXYspeedfactor<-----------------" & @CRLF
+		$WarningMsg = @CRLF & $WarningMsg & "--> WARNING excessive speed ! <--" & @CRLF
 		$FlagMsg=19
 	endif
 
@@ -82,23 +82,23 @@ Func Messages_Box()
 
 	; Done!
 	MsgBox($FlagMsg,"CubeItMod V4.10.0 Completed!", _
-		"Config.ini"					       & @CRLF & _	
-		"Conf_M108SpeedFactor=" 	& String($Conf_M108SpeedFactor) & @CRLF & _	
-		"Max_XY_speed_factor=" 		& String($Conf_MaxXYspeedfactor) 	& @CRLF & _
-		"Conf_MaxFSpeed=" 	    	& String($Conf_MaxFSpeed) 	& @CRLF & _
-		"--------------------------------"     & @CRLF & _
-		"MaxSpeedF="& String($MaxSpeed_calc)   & @CRLF & _
-		"--------------------------------"     & @CRLF & _
-		$M227_Msg                              & @CRLF & _
-		$M228_Msg                              & @CRLF & _
-		"--------------------------------"     & @CRLF & _			
-		$Conf_M108SpeedFactor_msg              & @CRLF & _
-		$MaxXYspeedfactor_msg                  & @CRLF & _
-		"--------------------------------"     & @CRLF & _
-		$Extruder_Msg                          & @CRLF & _
-		$WarningMsg                            & @CRLF & _
-		"--------------------------------"     & @CRLF & _
-		"New File: "& $InputFile               & @CRLF & _
+		"Config.ini"					       											& @CRLF & _	
+		"Conf_M108SpeedFactor	=" 		& String($Conf_M108SpeedFactor) 				& @CRLF & _	
+		"Max_XY_speed_factor	=" 		& String($Conf_MaxXYspeedfactor) 				& @CRLF & _
+		"Conf_MaxFSpeed			=" 	    & String($Conf_MaxFSpeed) 						& @CRLF & _
+		"--------------------------------"     											& @CRLF & _
+		"MaxSpeedF				="		& String($MaxSpeed_calc)   						& @CRLF & _
+		"--------------------------------"     											& @CRLF & _
+		$M227_Msg                              											& @CRLF & _
+		$M228_Msg                              											& @CRLF & _
+		"--------------------------------"     											& @CRLF & _			
+		$Conf_M108SpeedFactor_msg              											& @CRLF & _
+		$MaxXYspeedfactor_msg                  											& @CRLF & _
+		"--------------------------------"     											& @CRLF & _
+		$Extruder_Msg                          											& @CRLF & _
+		$WarningMsg                            											& @CRLF & _
+		"--------------------------------"     											& @CRLF & _
+		"New File: "& $InputFile               											& @CRLF & _
 		"Original File: " & $InputFile & ".bak")
 EndFunc
 
