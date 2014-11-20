@@ -18,7 +18,7 @@ Global $ActualRPM, $NewXYF , $InfillPerimeterFactor[4], $SolidPerimeterFactor[4]
 Global $Extruders = 0 , $Extruding = 0 , $MaxRPMfactor = 0, $WarningMSG="" , $FlagMsg=0 , $Filling=0, $Soliding =0 , $Perimetering = 0 , $Looping=0
 Global $AverageSolidLenght , $Line ,$hInput , $nStack , $Stacking = 0 , $InfillStyle, $Once = 0 , $BedRoughness=0 , $BedOffsetZ=0 ,$PrintingFirstLayer=False
 
-Global $Conf_M108SpeedFactor = 1 , $Conf_MaxXYspeedfactor = 0.1 , $Conf_MaxFSpeed = 25000
+Global $Conf_M108SpeedFactor = 1 , $Conf_MaxXYspeedfactor = 0.1 , $Conf_MaxFSpeed = 5000
 
 Global $MaxSpeed_calc=0
 
