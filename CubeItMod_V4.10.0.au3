@@ -82,7 +82,7 @@ Func Messages_Box()
 
 	; Done!
 	MsgBox($FlagMsg,"CubeItMod V4.10.0 Completed!", _
-		"Config.ini"					       											& @CRLF & _	
+		"Config.ini :"					       											& @CRLF & _	
 		"Conf_M108SpeedFactor	=" 		& String($Conf_M108SpeedFactor) 				& @CRLF & _	
 		"Max_XY_speed_factor	=" 		& String($Conf_MaxXYspeedfactor) 				& @CRLF & _
 		"Conf_MaxFSpeed			=" 	    & String($Conf_MaxFSpeed) 						& @CRLF & _
